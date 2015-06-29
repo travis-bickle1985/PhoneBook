@@ -9,9 +9,8 @@ public class Main {
     public static void main(String[] args) {
         Contact[] book = new Contact[20];
         int exit = 0;//это для пятого пункта меню (выход), далее будет цикл с постусловием
-
+        int size = 0;//это кол-во введенных контактов для второго пункта (удаление) и для вывода всего списка
         do {
-            int size = 0;//это кол-во введенных контактов для второго пункта (удаление) и для вывода всего списка
             System.out.println("\nМеню");
             System.out.println("1. Добавить контакт \n2. Удалить контакт \n3. Вывести все контакты \n" +
                     "4. Изменить контакт \n5. Выход");
@@ -25,12 +24,12 @@ public class Main {
                     do {
                         System.out.println("Выбрано добавление: \n");
                         System.out.println("Введите имя:");
-                        String aname = scan.next(); //непонятно почему я не могу использовать переменную name
+                        String name = scan.next();
                         System.out.println("Введите номер:");
-                        String anumber = scan.next();
+                        String number = scan.next();
                         System.out.println("Введите мыло:");
-                        String aemail = scan.next();
-                        book[size] = new Contact(aname, anumber, aemail);
+                        String email = scan.next();
+                        book[size] = new Contact(name, number, email);
                         book[size].talk(size); //методу talk нужен аргумент для нумерпции строк вывода контактов
                         size++;
                         System.out.println("Добавить еще контакт? \t1. Да 0. Нет");
