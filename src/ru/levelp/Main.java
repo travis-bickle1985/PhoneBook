@@ -11,7 +11,7 @@ public class Main {
         int exit = 0;//это для пятого пункта меню (выход), далее будет цикл с постусловием
 
         do {
-            int size = 0;//это для второго пункта (удаление) размер массива
+            int size = 0;//это кол-во введенных контактов для второго пункта (удаление) и для вывода всего списка
             System.out.println("\nМеню");
             System.out.println("1. Добавить контакт \n2. Удалить контакт \n3. Вывести все контакты \n" +
                     "4. Изменить контакт \n5. Выход");
@@ -25,7 +25,7 @@ public class Main {
                     do {
                         System.out.println("Выбрано добавление: \n");
                         System.out.println("Введите имя:");
-                        String aname = scan.next();
+                        String aname = scan.next(); //непонятно почему я не могу использовать переменную name
                         System.out.println("Введите номер:");
                         String anumber = scan.next();
                         System.out.println("Введите мыло:");
