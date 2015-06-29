@@ -7,16 +7,15 @@ import java.util.Scanner;
  */
 public class Main {
     public static void main(String[] args) {
-        //String name, phone, email;
         Contact[] book = new Contact[20];
-        int exit = 0;
-        int size = 0;
+        int exit = 0;//это для пятого пункта меню (выход), далее будет цикл с постусловием
+
         do {
+            int size = 0;//это для второго пункта (удаление) размер массива
             System.out.println("\nМеню");
             System.out.println("1. Добавить контакт \n2. Удалить контакт \n3. Вывести все контакты \n" +
                     "4. Изменить контакт \n5. Выход");
             System.out.println("Введите номер желаемого действия:\n");
-
             Scanner scan = new Scanner(System.in);
             int answer = scan.nextInt();
 
@@ -121,8 +120,8 @@ public class Main {
                     break;
             }
         } while (exit == 0);
-        /* пробовал вынести добавление контактов и тд отдельными методами, но запарился((
-            public static void addContact() {
+        /* пробовал вынести добавление контактов и тд отдельными методами, но запарился c областями видимости
+            private static void addContact() {
             Scanner scan = new Scanner(System.in);
             System.out.println("Введите имя");
             String name = scan.next();

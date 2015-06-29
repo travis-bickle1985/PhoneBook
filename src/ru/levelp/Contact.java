@@ -11,9 +11,9 @@ public class Contact {
         this.email = email;
     }
 
-    public void talk(int a) {
+    public void talk(int a) {//переменная a нужна для нумерации строк вывода, чтобы юзер выбирал
         //System.out.println("Вы ввели:");
-        System.out.printf(a + ") %10s %15s %15s \n" ,name, number, email);
+        System.out.printf(a + ") %15s %15s %15s \n" ,name, number, email);
         //System.out.println("Спасибо");
     }
 
